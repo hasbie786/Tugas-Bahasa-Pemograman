@@ -1,0 +1,17 @@
+<canvas id="egdiChart" width="600" height="300"></canvas>
+<script>
+  const ctx = document.getElementById('egdiChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['2022', '2023', '2024'],
+      datasets: [{
+        label: 'Skor EGDI Indonesia',
+        data: [0.76, 0.79, 0.799],
+        borderColor: 'blue',
+        fill: false
+      }]
+    },
+    options: { scales: { y: { beginAtZero: false } } }
+  });
+</script>
