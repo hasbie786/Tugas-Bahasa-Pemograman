@@ -1,17 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Analisis Transformasi Digital Daerah 2024</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: sans-serif; margin: 20px;}
+    table { border-collapse: collapse; width: 100%; margin-bottom: 20px;}
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 8px; text-align: center; }
+    th { background: #eee; }
+  </style>
+</head>
+<body>
+
+<h1>Transformasi Digital Pemerintahan Daerah 2024</h1>
+<h2>1. Tren Nasional (EGDI 2022–2024)</h2>
 <canvas id="egdiChart" width="600" height="300"></canvas>
+
+<h2>2. Implementasi Per Wilayah</h2>
+<table>
+  <tr>
+    <th>Wilayah</th><th>Infrastruktur</th><th>Layanan Digital</th><th>Integrasi Data</th><th>Catatan</th>
+  </tr>
+  <tr><td>Jawa & Bali</td><td>★★★★★</td><td>★★★★☆</td><td>★★★★☆</td><td>PTSP & portal publik mapan</td></tr>
+  <tr><td>Sumut (Gunungsitoli)</td><td>★★★★☆</td><td>★★★☆☆</td><td>★★★☆☆</td><td>Data warehouse kesehatan</td></tr>
+  <tr><td>3T (Papua)</td><td>★★☆☆☆</td><td>★★☆☆☆</td><td>★☆☆☆☆</td><td>Konektivitas & SDM terbatas</td></tr>
+  <tr><td>Maluku</td><td>★★☆☆☆</td><td>★★☆☆☆</td><td>★★☆☆☆</td><td>PTSP-Online percontohan</td></tr>
+</table>
+
+<h2>3. Tantangan Utama</h2>
+<ul>
+  <li>Infrastruktur (konektivitas 3T, satelit, nirkabel)</li>
+  <li>SDM & literasi digital ASN</li>
+  <li>Integrasi data (silo OPD)</li>
+  <li>Keamanan cyber & privasi</li>
+  <li>Partisipasi masyarakat rendah</li>
+</ul>
+
+<h2>4. Rekomendasi Kebijakan 2025</h2>
+<ol>
+  <li>Subsidi infrastruktur digital di daerah prioritas (3T)</li>
+  <li>Pelatihan & sertifikasi ASN digital</li>
+  <li>Standarisasi & API terbuka antar-OPD</li>
+  <li>Peningkatan keamanan & audit siber</li>
+  <li>Kampanye literasi digital publik</li>
+  <li>Dashboard kinerja digital daerah</li>
+</ol>
+
 <script>
-  const ctx = document.getElementById('egdiChart').getContext('2d');
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: ['2022', '2023', '2024'],
-      datasets: [{
-        label: 'Skor EGDI Indonesia',
-        data: [0.76, 0.79, 0.799],
-        borderColor: 'blue',
-        fill: false
-      }]
-    },
-    options: { scales: { y: { beginAtZero: false } } }
-  });
+const ctx = document.getElementById('egdiChart').getContext('2d');
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['2022','2023','2024'],
+    datasets: [{label:'Skor EGDI', data:[0.76,0.79,0.799], borderColor:'blue'}]
+  },
+  options:{scales:{y:{beginAtZero:false}}}
+});
 </script>
+
+</body>
+</html>
